@@ -1,0 +1,38 @@
+#wrapper{
+      width:800px;
+      margin: 0 auto 0 auto;
+        }
+
+body{
+background-color:black;
+}
+
+header{
+        width: 800px;
+        background-color : #606060;
+        height:100px;
+}
+
+#content{
+        width: 800px;
+        background-color : #E8E8E8;
+        height:500px;
+        align :center;
+}
+
+#wrapper .text {
+position:bottom;
+bottom:30px;
+left:0px;
+visibility:hidden;
+}
+
+#wrapper:hover .text {
+visibility:visible;
+}
+
+.container {
+    width: 500px;
+    clear: both;
+    margin-right:50%;
+}
