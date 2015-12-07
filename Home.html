@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>HOME</title>
+
+<link href="main.css" rel="stylesheet" type="text/css" />
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+ 	<script>
+			var app = angular.module('myApp', []);
+			app.controller('formCtrl', function($scope) {
+		    	$scope.master = {firstName: "", lastName: ""};
+		    	$scope.reset = function() {
+		        $scope.user = angular.copy($scope.master);
+		    };
+		    $scope.reset();
+		});
+	 </script>
+</head>
+
+<body ng-app="myApp" ng-controller="formCtrl">
+<div id="wrapper">
+
+<header>
+<img src="http://www.jobstreet.co.id/logos/agenalogos/dsv_logo.jpg" style="width:800px;height:165px;">
+</header>
+
+<h1 style="font-family:verdana;color:white;">DSV Car Gallery</h1>
+<div id="navcontainer">
+	<ul id="navlist">
+		<li id="active"><a href="Home.html" id="current">Item one</a></li>
+		<li><a href="About.html">About Us</a></li>
+		
+	</ul>
+</div>
+<h2><p style="font-family:verdana;color:blue;">Welcome to DSV Car Gallery. <br>Enter your Name to see the my car collection.</p></h2><br>
+
+ <form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">First Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="First Name" ng-model="user.firstName">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Last Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Last Name" ng-model="user.lastName">
+  </div>
+  <!-- <button type="submit" class="btn btn-default">Send invitation</button> -->
+</form>
+
+<div ng-if="user.firstName && user.lastName">
+  	<br><p >Hello {{user.firstName}} {{user.lastName}}, Hop on the image for the car details.</p><br>
+  <div>
+
+
+<table style="background-color:grey;">
+<tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" 
+	src="http://file.kelleybluebookimages.com/kbb/vehicleimage/housenew/640x480/2015/2015-lamborghini-aventador-frontside_lbavr151.jpg" 
+	alt="lamborghini aventador" class="hover" />
+    <p class="text">Lamborghini Aventador 2015<br>
+    MSRP: From $397,500<br>
+	Horsepower: 691 to 720 HP<br>
+	MPG: Up to 11 city, 18 highway<br>
+	Engine: 6.5L V12</p>
+</td></tr>
+</tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+	src="http://file.kelleybluebookimages.com/kbb/vehicleimage/housenew/640x480/2015/2015-ferrari-458%20italia-frontside_fef458it151.jpg" 
+	alt="Ferrari 458 Spider"  
+	class="hover" />
+    <p class="text">Ferrari 458 Spider 2015<br>
+	MSRP: From $263,553<br>
+	MPG: 13 city / 17 highway<br>
+	Horsepower: 570 HP<br>
+	Engine: 4.5L V8<br>
+	Fuel tank capacity: 22.7 gal</p>
+</td></tr>
+<tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+	src="http://blog.vehiclejar.com/wp-content/gallery/lamborghini-cabrera-spyder/lamborghini-cabrera-spyder-4.jpg" 
+	alt="lamborghini Gallardo"class="hover" />
+    <p class="text">Lamborghini Gallardo 2014<br>
+    MSRP: From $181,900<br>
+	Horsepower: 543 to 562 HP<br>
+	MPG: Up to 14 city, 20 highway<br>
+	Engine: 5.2L V10</p>
+</td></tr>
+<tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+	src="http://cimg.carsforsale.com/329566/2AE6D6C4-1A07-4CB4-B318-689F4A9C63E5_1.jpg" 
+	alt="maserati ghibli 2015" 
+	class="hover" />
+    <p class="text">Maserati Ghibli 2015<br>
+    MSRP: From $69,800<br>
+	Horsepower: 345 to 404 HP<br>
+	MPG: 15 city / 25 highway<br>
+	Engine: 3.0L V6<br>
+	Fuel tank capacity: 21.1 gal</p>
+</td></tr>
+
+<tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+	src="http://db.carbuzz.com/images2/490000/2000/600/492619.jpg" 
+	alt="" 
+	class="hover" />
+    <p class="text">Lexus LFA 2014<br>
+    Horsepower: 553 HP<br>
+	MPG: 11 city / 16 highway<br>
+	Engine: 4.8L V10<br>
+	Fuel tank capacity: 19.3 gal<br>
+	Wheel size: Front 20" diameter, 9.5" width; rear 20" diameter, 11.5" width<br>
+	Curb weight: 3,263 lbs</p>
+</td></tr>
+
+<tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+	src="http://4.bp.blogspot.com/-5Jdy04Mapbk/UjWKxBepDDI/AAAAAAAAEfw/jn_e_oNEDmg/s1600/BMW+i8.jpg" 
+	alt="" 
+	class="hover" />
+    <p class="text">BMW i8 2015<br>
+    MSRP: From $136,500<br>
+	Other model years: 2014<br>
+	Range: 15 mi battery-only<br>
+	Horsepower: 357 HP<br>
+	Engine: 1.5L 3-cylinder<br>
+	Battery: 7.1 kWh lithium-ion</p>
+</td></tr>
+
+<tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+	src="https://images.dealer.com/ddc/vehicles/2015/Mercedes-Benz/SLS%20AMG/Convertible/color/Mars%20Red-590-124,16,34-640-en_US.jpg" 
+	alt="" 
+	class="hover" />
+    <p class="text">Mercedes-Benz SLS AMG 2015<br>
+    MSRP: From $221,580<br>
+	Horsepower: 583 HP<br>
+	MPG: 13 city / 19 highway<br>
+	Engine: 6.2L V8</p>
+</td></tr>
+<tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+	src="http://images.dealer.com/autodata/us/640/2015/USC50AUC171C0/CAC40AUC171C01301.jpg" 
+	alt="" 
+	class="hover" />
+    <p class="text">Audi R8 2015<br>
+    Horsepower: 430 to 570 HP<br>
+	MPG: Up to 14 city, 23 highway<br>
+	MSRP: From $115,900<br>
+	Engine: 5.2L V10, 4.2L V8</p>
+</td></tr>
+<tr><td>
+	<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+	src="http://file.kelleybluebookimages.com/kbb/vehicleimage/evoxseo/xxl/9788/2015-jaguar-f-type%20convertible-front-angle3_9788_089_640x480.jpg" 
+	alt="" 
+	class="hover" />
+    <p class="text">Jaguar F-TYPE 2016<br>
+    MSRP: From $65,000<br>
+	MPG: Up to 19 city, 28 highway<br>
+	Horsepower: 340 to 550 HP<br>
+	Other model years: 2014, 2015<br>
+	Engine: 3.0L V6, 5.0L V8</p>
+</td></tr> 
+
+</table>
+</div>
+
+</div>
+</body>
+
+</html>
