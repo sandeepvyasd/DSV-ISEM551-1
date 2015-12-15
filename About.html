@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>HOME</title>
+
+<link href="main.css" rel="stylesheet" type="text/css" />
+<!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+ 	<script>
+			var app = angular.module('myApp', []);
+			app.controller('formCtrl', function($scope) {
+		    	$scope.master = {firstName: "", lastName: ""};
+		    	$scope.reset = function() {
+		        $scope.user = angular.copy($scope.master);
+		    };
+		    $scope.reset();
+		});
+	 </script>
+</head>
+
+<body ng-app="myApp" ng-controller="formCtrl">
+<div id="wrapper">
+
+<header>
+<img src="http://www.jobstreet.co.id/logos/agenalogos/dsv_logo.jpg" style="width:800px;height:165px;">
+</header>
+
+<h1 style="font-family:verdana;color:white;">DSV Car Gallery</h1>
+<div id="navcontainer">
+	<ul id="navlist">
+		<li ><a href="Home.html" id="current">Item one</a></li>
+		<li id="active"><a href="About.html">About Us</a></li>
+		
+	</ul>
+</div>
+<h2><p style="font-family:verdana;color:blue;">Welcome to DSV Car Gallery.</p></h2><br>
+
+<p> This is just fun. Hopefully my website is good.<br></p>
+<p>Please let me know, if any changes required.</p>
+
+</div>
+</body>
+
+</html>
